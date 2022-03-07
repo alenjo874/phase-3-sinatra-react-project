@@ -13,4 +13,7 @@ end
 use Rack::JSONBodyParser
 
 # Our application
+use NotesController
+use StudySessionsController
+use UsersController
 run ApplicationController
