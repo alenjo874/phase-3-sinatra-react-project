@@ -21,5 +21,12 @@ Note.create(subject: Faker::Educator.subject, study_note: Faker::Quote.famous_la
 
 end
 
+puts "🌱 Creating user sessions..."
+20.times do
+
+UserSession.create(user_id: User.all.sample.id, study_session_id: StudySession.all.sample.id)
+
+end
+
 
 puts "✅ Done seeding!"
