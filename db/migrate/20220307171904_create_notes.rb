@@ -3,6 +3,8 @@ class CreateNotes < ActiveRecord::Migration[6.1]
       create_table :notes do |t|
       t.string :subject
       t.string :study_note
+      t.integer :user_id
+      t.integer :study_session_id
     end
   end
 end

@@ -1,4 +1,4 @@
 class Note < ActiveRecord::Base
-    has_many :users
-    has_many :study_sessions, through: :users
+    belongs_to :user
+    belongs_to :study_session
 end

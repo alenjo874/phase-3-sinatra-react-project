@@ -15,6 +15,8 @@ ActiveRecord::Schema.define(version: 2022_03_07_171913) do
   create_table "notes", force: :cascade do |t|
     t.string "subject"
     t.string "study_note"
+    t.integer "user_id"
+    t.integer "study_session_id"
   end
 
   create_table "study_sessions", force: :cascade do |t|
@@ -27,8 +29,6 @@ ActiveRecord::Schema.define(version: 2022_03_07_171913) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.integer "note_id"
-    t.integer "study_session_id"
   end
 
 end
