@@ -1,5 +1,5 @@
 class NotesController < Sinatra::Base
-  
+  set :default_content_type, 'application/json'
     get "/notes" do
       notes = Note.all
       notes.to_json

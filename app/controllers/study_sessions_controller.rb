@@ -1,5 +1,7 @@
 class StudySessionsController < Sinatra::Base
-  
+
+    set :default_content_type, 'application/json'
+    
     get "/study_sessions" do
         study_sessions = StudySession.all
         study_sessions.to_json
