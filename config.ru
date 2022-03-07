@@ -16,4 +16,5 @@ use Rack::JSONBodyParser
 use NotesController
 use StudySessionsController
 use UsersController
+use UserSessionsController
 run ApplicationController
