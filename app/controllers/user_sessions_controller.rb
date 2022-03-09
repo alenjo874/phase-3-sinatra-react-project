@@ -4,5 +4,11 @@ class UserSessionsController < Sinatra::Base
       user_sessions = UserSession.all
       user_sessions.to_json
     end
+
+
+    post "/user_sessions" do
+      new_user_sessions =UserSession.create(params)
+      new_user_sessions.to_json
+    end
   
 end
