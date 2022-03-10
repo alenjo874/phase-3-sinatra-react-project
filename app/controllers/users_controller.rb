@@ -4,5 +4,6 @@ class UsersController < Sinatra::Base
       users = User.all
       users.to_json
     end
+
   
 end

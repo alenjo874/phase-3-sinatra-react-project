@@ -17,4 +17,5 @@ use NotesController
 use StudySessionsController
 use UsersController
 use UserSessionsController
+use TodoListsController
 run ApplicationController

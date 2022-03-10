@@ -28,5 +28,12 @@ UserSession.create(user_id: User.all.sample.id, study_session_id: StudySession.a
 
 end
 
+puts "🌱 Creating todo list..."
+10.times do
+
+TodoList.create(task:Faker::Lorem.sentence(word_count: 10), completed: false, user_id:User.all.sample.id )
+
+end
+
 
 puts "✅ Done seeding!"
