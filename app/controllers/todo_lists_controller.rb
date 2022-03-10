@@ -17,5 +17,23 @@ class TodoListsController < Sinatra::Base
       new_todo_list.to_json
     end
 
+
+    delete "/todo_lists/:id" do
+      delete_todo = TodoList.find(params[:id])
+      delete_todo.destroy
+    end
+
+    patch "/todo_lists/:id" do
+      edit_todo = TodoList.find(params[:id])
+      edit_todo.update(params)
+      edit_todo.to_json
+    end
+
+    patch "/todo_lists_complete/:id" do
+      finish_todo = TodoList.note_completion(params[:id])
+  
+      finish_todo.to_json
+    end
+
   
 end
