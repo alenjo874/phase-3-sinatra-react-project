@@ -29,11 +29,6 @@ class TodoListsController < Sinatra::Base
       edit_todo.to_json
     end
 
-    patch "/todo_lists_complete/:id" do
-      finish_todo = TodoList.note_completion(params[:id])
-  
-      finish_todo.to_json
-    end
 
   
 end
