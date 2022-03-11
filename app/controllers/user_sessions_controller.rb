@@ -6,6 +6,8 @@ class UserSessionsController < Sinatra::Base
       user_sessions.to_json
     end
 
+ 
+
     get "/user_sessions_notes/:id" do
       current_user = UserSession.find(params[:id])
       current_session_notes = current_user.user_notes

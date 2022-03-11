@@ -7,6 +7,11 @@ class StudySessionsController < Sinatra::Base
         study_sessions.to_json
     end
 
+    get "/study_sessions_notes" do
+      user_sessions = StudySession.all
+      user_sessions.to_json(include: :notes)
+    end
+
     post "/study_sessions" do
         new_study_session = StudySession.create(params)
         new_study_session.to_json
